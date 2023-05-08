@@ -14,7 +14,7 @@ const Pokemonlist = ({pokemons,setpokemons}) => {
     const fetchData = async () => {
       setloading(true);
       const response = await axios.get(
-        "https://pokeapi.co/api/v2/pokemon?limit=10000"
+        "https://pokeapi.co/api/v2/pokemon?limit=500"
       );
       if (response.status === 200) {
         const pokemonData = await Promise.all(
