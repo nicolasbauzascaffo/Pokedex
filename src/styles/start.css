@@ -1,0 +1,41 @@
+.start {
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+    background-image: url('../images/wallpapers pokeball.jpg');
+    background-size: cover;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 50px;
+}
+
+.start-menu {
+    color: white;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: effect;
+    animation-duration: 1s;
+}
+
+.start-menu h1 {
+    font-weight: bold;
+}
+
+@keyframes effect {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @media only screen and (max-device-width: 1000px) and (orientation: landscape) {
+    .start {
+      padding-bottom: 20px;
+      padding-top: 10px;
+    }
+  }
