@@ -11,11 +11,12 @@ const Start = () => {
       <section className="start-menu">
         <h1>Pokédex</h1>
         <img src={pokebola} />
-        <Link to='home' >
+        <Link style={{textDecoration:'none'}} to='home' >
           <Button
+
             variant="contained"
             color="error"
-            sx={{ backgroundColor: "transparent", width: "150px" }}
+            sx={{ backgroundColor: "transparent", width: "150px", textDecoration:'none' }}
             endIcon={<CatchingPokemonIcon />}
           >
             Start
