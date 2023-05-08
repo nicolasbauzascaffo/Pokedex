@@ -66,7 +66,8 @@ const Pokedetail = () => {
             <Link to="/home">
               <img src={arrow} />
             </Link>
-            <h3>{pokemon.name.toUpperCase()[0] + pokemon.name.substring(1)}</h3>
+            <h3  lang="en"
+              translate="no" style={{fontWeight:'bold'}} >{pokemon.name.toUpperCase()[0] + pokemon.name.substring(1)}</h3>
             <h5># {pokemon.id}</h5>
           </section>
           <section className="arrow-section">
@@ -120,23 +121,18 @@ const Pokedetail = () => {
               <section className="about-info">
                 <section className="row-info">
                   <section className="column-info">
-                    <img src={v1} />
+                    <img style={{width:'10px'}} src={v1} />
                     <h6>{pokemon.weight / 10} kg</h6>
                   </section>
                   <section className="column-info">
-                    <img src={v2} />
+                    <img style={{width:'6px'}}  src={v2} />
                     <h6>{pokemon.height / 10} m</h6>
                   </section>
                 </section>
               </section>
             </section>
             <section className="description">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-                sagittis sapien quis sem ultricies, quis venenatis mauris
-                congue. Integer id odio at leo malesuada auctor. Donec ut nunc
-                vel lacus efficitur sollicitudin.{" "}
-              </p>
+            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h6>
             </section>
             <section className="stats">
               <h4

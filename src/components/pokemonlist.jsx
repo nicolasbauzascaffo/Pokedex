@@ -67,7 +67,8 @@ const Pokemonlist = ({pokemons,setpokemons}) => {
                 src={pokemon.image || pokebola}
                 alt={pokemon.name}
               />
-              <h6 style={{color:'white'}} >{pokemon.name.toUpperCase()}</h6>
+              <h6  lang="en"
+              translate="no" style={{color:'white'}} >{pokemon.name.toUpperCase()}</h6>
             </Link>
           </section>
         ))
