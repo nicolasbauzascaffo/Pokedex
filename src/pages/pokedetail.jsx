@@ -26,9 +26,9 @@ const Pokedetail = () => {
           setpokemon(response.data);
         }
       })
-      .catch((error) => {
-        console.error(error);
-      });
+      .catch((error)=> {
+        console.log(error)
+      })
   }, [pokemonName]);
 
   const getColor = (type) => {
@@ -37,7 +37,7 @@ const Pokedetail = () => {
 
   const nextPokemon = () => {
     getPokemon(pokemon.id + 1).then((response) => {
-      if (pokemon.id < 500) {
+      if (pokemon.id < 151) {
         setpokemon(response.data);
         navigate(`/${response.data.id}`);
       }
@@ -81,7 +81,7 @@ const Pokedetail = () => {
 
             <button
               onClick={nextPokemon}
-              disabled={pokemon.id === 500}
+              disabled={pokemon.id === 151}
               className="arrow"
               style={{backgroundColor:'transparent', border:'none'}}
             >

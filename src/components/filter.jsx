@@ -9,7 +9,7 @@ const Filter = ({ pokemons, setpokemons }) => {
   useEffect(() => {
     const fetchData = async () => {
       const response = await axios.get(
-        "https://pokeapi.co/api/v2/pokemon?limit=500"
+        "https://pokeapi.co/api/v2/pokemon?limit=151"
       );
       if (response.status === 200) {
         const pokemonData = await Promise.all(
