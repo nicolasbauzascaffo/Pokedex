@@ -7,7 +7,7 @@ import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import background from "../common/colors";
 
-const Pokemonlist = ({pokemons,setpokemons}) => {
+const Pokemonlist = ({ pokemons, setpokemons }) => {
   const [loading, setloading] = useState(false);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Pokemonlist = ({pokemons,setpokemons}) => {
             return {
               name: pokemon.name,
               image: pokemonResponse.data.sprites.other["home"].front_default,
-              id: pokemonResponse.data.id ,
+              id: pokemonResponse.data.id,
               type: pokemonResponse.data.types[0].type.name,
             };
           })
@@ -43,36 +43,37 @@ const Pokemonlist = ({pokemons,setpokemons}) => {
 
   return (
     <div className="pokemons">
-      <div className="list" >
-      {loading ? (
-        <Box sx={{ display: "flex" }}>
-          <CircularProgress />
-        </Box>
-      ) : (
-        pokemons.map((pokemon) => (
-          <section
-            className="pokemon-box"
-            style={{
-              backgroundColor: getColor(pokemon.type),
-            }}
-            key={pokemon.name}
-          >
-            <Link
-              to={`/${pokemon.id}`}
-              style={{ textDecoration: "none", color: "black" }}
+      <div className="list">
+        {loading ? (
+          <div className="loading-Div" >
+            <span className="loader"></span>
+          </div>
+        ) : (
+          pokemons.map((pokemon) => (
+            <section
+              className="pokemon-box"
+              style={{
+                backgroundColor: getColor(pokemon.type),
+              }}
+              key={pokemon.name}
             >
-              <h6 style={{color:'white'}} ># {pokemon.id}</h6>
-              <img
-                className="image-pokemon"
-                src={pokemon.image || pokebola}
-                alt={pokemon.name}
-              />
-              <h6  lang="en"
-              translate="no" style={{color:'white'}} >{pokemon.name.toUpperCase()}</h6>
-            </Link>
-          </section>
-        ))
-      )}
+              <Link
+                to={`/${pokemon.id}`}
+                style={{ textDecoration: "none", color: "black" }}
+              >
+                <h6 style={{ color: "white" }}># {pokemon.id}</h6>
+                <img
+                  className="image-pokemon"
+                  src={pokemon.image || pokebola}
+                  alt={pokemon.name}
+                />
+                <h6 lang="en" translate="no" style={{ color: "white" }}>
+                  {pokemon.name.toUpperCase()}
+                </h6>
+              </Link>
+            </section>
+          ))
+        )}
       </div>
     </div>
   );

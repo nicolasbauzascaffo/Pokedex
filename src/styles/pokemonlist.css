@@ -1,15 +1,18 @@
 .pokemons {
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
+  display: flex;
+  padding-left: 18px;
 }
 
 .list {
   display: flex;
   flex-wrap: wrap;
   gap: 5px;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   height: auto;
+  width: 100%;
 }
 
 .pokemon-box {

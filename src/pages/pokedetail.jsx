@@ -26,9 +26,9 @@ const Pokedetail = () => {
           setpokemon(response.data);
         }
       })
-      .catch((error)=> {
-        console.log(error)
-      })
+      .catch((error) => {
+        console.log(error);
+      });
   }, [pokemonName]);
 
   const getColor = (type) => {
@@ -66,8 +66,9 @@ const Pokedetail = () => {
             <Link to="/home">
               <img src={arrow} />
             </Link>
-            <h3  lang="en"
-              translate="no" style={{fontWeight:'bold'}} >{pokemon.name.toUpperCase()[0] + pokemon.name.substring(1)}</h3>
+            <h3 lang="en" translate="no" style={{ fontWeight: "bold" }}>
+              {pokemon.name.toUpperCase()[0] + pokemon.name.substring(1)}
+            </h3>
             <h5># {pokemon.id}</h5>
           </section>
           <section className="arrow-section">
@@ -75,7 +76,7 @@ const Pokedetail = () => {
               onClick={prevPokemon}
               disabled={pokemon.id === 1}
               className="arrow"
-              style={{backgroundColor:'transparent', border:'none'}}
+              style={{ backgroundColor: "transparent", border: "none" }}
             >
               <img src={left} alt="Arrow Left" />
             </button>
@@ -84,7 +85,7 @@ const Pokedetail = () => {
               onClick={nextPokemon}
               disabled={pokemon.id === 151}
               className="arrow"
-              style={{backgroundColor:'transparent', border:'none'}}
+              style={{ backgroundColor: "transparent", border: "none" }}
             >
               <img src={right} alt="Arrow Left" />
             </button>
@@ -121,18 +122,23 @@ const Pokedetail = () => {
               <section className="about-info">
                 <section className="row-info">
                   <section className="column-info">
-                    <img style={{width:'10px'}} src={v1} />
+                    <img style={{ width: "10px" }} src={v1} />
                     <h6>{pokemon.weight / 10} kg</h6>
                   </section>
                   <section className="column-info">
-                    <img style={{width:'6px'}}  src={v2} />
+                    <img style={{ width: "6px" }} src={v2} />
                     <h6>{pokemon.height / 10} m</h6>
                   </section>
                 </section>
               </section>
             </section>
             <section className="description">
-            <h6>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h6>
+              <h6>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </h6>
             </section>
             <section className="stats">
               <h4

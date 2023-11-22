@@ -5,7 +5,8 @@ import Pokemonlist from "../components/pokemonlist";
 
 const Home = () => {
   const [pokemons, setpokemons] = useState([]);
-  const [keyword, setkeyword] = useState('');
+  const [keyword, setkeyword] = useState("");
+
   return (
     <div className="home">
       <Filter
